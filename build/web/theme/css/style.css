@@ -1,0 +1,283 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 25, 2020, 10:56:56 AM
+    Author     : vivian
+*/
+
+@font-face {
+font-family: "FontAwesome";
+font-weight: normal;
+font-style : normal;
+       src : url("../fonts/fontawesome-webfont.eot?"),
+             url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"),
+             url("../fonts/fontawesome-webfont.woff2") format("woff2"),
+             url("../fonts/fontawesome-webfont.woff") format("woff"),
+             url("../fonts/fontawesome-webfont.ttf") format("truetype"),
+             url("../fonts/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+}
+
+body {
+  background: #F5F5F5;
+  color: #372f2d;
+  font-family: Arial, sans-serif; 
+  /*font-family: 'Raleway-Light', Helvetica ,Arial, sans-serif; */
+  /*font-family: Verdana, Tahoma, sans-serif;*/
+  /*font-family: "Lucida Grande",Helvetica,Arial,"Arial Unicode",sans-serif;*/ 
+  
+  /*font-family: arial,sans-serif;*/ 
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.75em;  /*12px base 16px */
+  line-height: 1.42;
+}
+
+.container{
+    max-width: 1360px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#footer,
+#header .top-header{
+    background: #023758;
+    color: white;
+    font-size: 0.95em;
+}
+
+#header .class-header{
+    background: #0171CE;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#header .main-menu{
+    background: #258DD9;
+}
+
+#header .linea{
+    display: flex;
+    align-items: baseline;
+}
+
+#footer p,
+#header p{
+    margin-bottom: 0px;
+    margin-right: 5px;
+    border-left: 1px #F5F5F5 solid;
+    padding: 0 0 0 5px;
+}
+
+#header .linea > p:first-child,
+#footer .linea > p:first-child{
+   border-left-style: none;
+   padding-left: 0px;
+}
+
+#header p > b{
+    color: #3F74C2;
+}
+
+#header .class-header .logo{
+    text-align: center;
+}
+
+#header .class-header .logo > img{
+    max-width: 152px;
+    height: 35px;
+}
+
+#header .class-header .header-menu,
+#header .class-header .cart,
+#header .class-header .dept{
+    background: #05578F;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    text-align: center;
+    width: inherit;
+    color: white;
+    /*padding: 15px;*/
+/*    padding-bottom: 10px;
+    padding-top: 10px;*/
+    font-size: 1.1em;
+    padding: .5rem !important;
+}
+
+#header .class-header .cart{
+    /*display: flex;*/
+    align-items: baseline;
+    color: #FFC11F;
+}
+
+#header .class-header .dept{
+    background: #5FB545;
+}
+
+#header .class-header .search-box{
+    background: white;
+    border-radius: 25px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    font-size: 1.1em;
+    /*padding: .5rem !important;*/
+}
+
+#header .btn{
+    border-style: none;
+}
+
+#header .class-header .dept > a {
+    text-decoration: none;
+    color:white;
+}
+
+span.items{
+    background: #FFC11F;
+    color: #05578F;
+    margin-left: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+}
+
+#header .class-header .header-menu{
+    padding: 5px;
+}
+
+#header nav.navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#header .navbar-toggler{
+    font-size: inherit;
+}
+
+#header .navbar-toggler > span{
+    color: white;
+}
+
+#header .header-menu .container-fluid{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#header .header-menu .navbar-brand{
+    font-size: inherit;
+    color: inherit;
+}
+
+#main {
+    min-height: 500px;
+}
+
+div.result-bar{
+    padding: 10px;
+}
+
+div.result-bar .dropdown {
+    background: white;
+}
+
+#main div.item{
+    background: white;  
+    color: red;
+}
+
+.search-result .card-img-top{
+    padding: 2em;
+    background: rgb(255,255,255);
+/*    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 100%); */
+    background: linear-gradient(180deg, rgba(255,255,255,1) 47%, rgba(245,245,245,1) 100%);
+    max-height: 180px;
+}
+
+.search-result .card-body{
+    padding: 0.375rem 1rem;
+}
+
+small.btn-warehouse,
+small.btn-transport{
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 1.5em;
+    margin-bottom: .75rem;
+    padding: .25rem .75rem;
+}
+
+small.btn-warehouse{
+    color: #DC3545;
+    border-color: #DC3545;
+}
+
+small.btn-transport{
+    color: #6CA8DA;
+    border-color: #6CA8DA;
+    margin-right: 0.5em;
+}
+
+small.btn-transport > .fa,
+small.btn-warehouse > .fa{
+    margin-right: .25rem;
+}
+
+#main div.card-footer{
+    background: transparent;
+    text-align: center;
+    border-top-style: none;
+}
+
+#main div.card-footer > .add-cart{
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-style: solid;
+    border-width: 1px;
+    color: #0071CE;
+    border-color: #0071CE;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: .25rem 1.75rem;
+    
+    box-shadow: 2px 4px 7px 4px rgba(225,211,211,0.54);
+    -webkit-box-shadow: 2px 4px 7px 4px rgba(225,211,211,0.54);
+    -moz-box-shadow: 2px 4px 7px 4px rgba(225,211,211,0.54);
+}
+
+.paging {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    background: white;
+    border-radius: 25px;
+   -moz-border-radius: 25px;
+   -webkit-border-radius: 25px;
+    text-align: center;
+}
+
+.paging .page-link{
+    border-style: none;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+}
+
+ul.pagination {
+  margin-bottom: 0px;  
+}
+
+#footer {
+    background: #023758;
+}
