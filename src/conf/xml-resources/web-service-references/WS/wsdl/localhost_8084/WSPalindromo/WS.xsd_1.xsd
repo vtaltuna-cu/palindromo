@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://webservices/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservices/">
+
+<xs:element name="getProducts" type="tns:getProducts" />
+
+<xs:element name="getProductsResponse" type="tns:getProductsResponse" />
+
+<xs:complexType name="getProducts">
+<xs:sequence>
+<xs:element name="search" type="xs:string" minOccurs="0" />
+<xs:element name="page" type="xs:int" />
+<xs:element name="pageSize" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getProductsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

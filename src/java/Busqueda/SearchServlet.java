@@ -80,7 +80,9 @@ public class SearchServlet extends HttpServlet {
             
             data.put("search", searchText!=null?searchText:"");
             
-            Map<String, Object> listado = (new Oferta()).getProductos(searchText,pageNumber, pageSize);
+            Map<String, Object> listado = (new Oferta()).getProducts(searchText,pageNumber, pageSize);
+            
+           // Map<String, Object> listado = (new Oferta()).getProductos(searchText,pageNumber, pageSize);
             
             if (listado.get("productos").toString().length() > 2){
                 data.put("list", listado.get("productos"));

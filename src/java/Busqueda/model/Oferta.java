@@ -6,22 +6,8 @@
 package Busqueda.model;
 
 //import com.mongodb.util.JSON;
-import com.mongodb.DBCursor;
-import com.mongodb.client.FindIterable;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoCursor;
-import com.mongodb.client.MongoDatabase;
-import static com.mongodb.client.model.Filters.eq;
-import static com.mongodb.client.model.Filters.or;
-import static com.mongodb.client.model.Filters.regex;
-import static com.mongodb.client.model.Projections.excludeId;
-import com.mongodb.client.model.Sorts;
-import freemarker.core.ParseException;
-import java.util.ArrayList;
-import java.util.HashMap;
+import com.google.gson.Gson;
 import java.util.Map;
-import java.util.Set;
-import org.bson.Document;
 
 /**
  *
@@ -29,9 +15,28 @@ import org.bson.Document;
  */
 public class Oferta {
 
-    private Integer percent = 50;
+    public Oferta() {
+    }
+
+    public static Map<String, Object> getProducts(java.lang.String search, int page, int pageSize) {
+        Busqueda.clientews.WS_Service service = new Busqueda.clientews.WS_Service();
+        Busqueda.clientews.WS port = service.getWSPort();
+        String resultado = port.getProducts(search, page, pageSize);
+        Gson g = new Gson();  
+        Map<String, Object> json = g.fromJson(resultado, Map.class);
+        //JSONObject json = new JSONObject(resultado); 
+        return json;
+    }
+    
+   /* private Integer percent = 50;
+    
+    
     
     public Map<String, Object> getProductos(String cadena, Integer pagina, Integer largoPagina){
+        
+        GetProducts ws = new GetProducts();
+        
+                
         
         Map<String, Object> resultado = new HashMap<String, Object>();
         cadena = cadena.trim();
@@ -129,6 +134,8 @@ public class Oferta {
         StringBuilder inicial = new StringBuilder(cadena.trim().toLowerCase());
         StringBuilder alreves = inicial.reverse();
         return (alreves.toString()).equals(cadena);
-    }
+    }*/
+
+    
     
 }
