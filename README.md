@@ -1,4 +1,4 @@
-# palindromo
+# Palindromo
 
 Website con búsqueda de productos.
 
