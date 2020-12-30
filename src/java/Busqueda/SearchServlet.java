@@ -69,8 +69,6 @@ public class SearchServlet extends HttpServlet {
             
             Integer pageSize = request.getParameter("size")!=null?Integer.parseInt(request.getParameter("size")):12;
             
-            String errorMsg = "";
-
             //Para enviar datos a la vista
             Map<String, Object> data = new HashMap<String, Object>();
             String baseUrl = request.getRequestURL().substring(0, request.getRequestURL().length() - request.getRequestURI().length()) + request.getContextPath();
@@ -82,8 +80,6 @@ public class SearchServlet extends HttpServlet {
             
             Map<String, Object> listado = (new Oferta()).getProducts(searchText,pageNumber, pageSize);
             
-           // Map<String, Object> listado = (new Oferta()).getProductos(searchText,pageNumber, pageSize);
-            
             if (listado.get("productos").toString().length() > 2){
                 data.put("list", listado.get("productos"));
                 data.put("pagina", listado.get("pagina"));
@@ -93,8 +89,6 @@ public class SearchServlet extends HttpServlet {
             } else 
                 template = cfg.getTemplate("nofound.ftl");
             
-            
-
             template.process(data, out);
             out.close();
         }

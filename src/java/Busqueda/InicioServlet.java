@@ -58,10 +58,8 @@ public class InicioServlet extends HttpServlet {
 
             String searchText = request.getParameter("search");
             if (searchText == null) {
-                //verifico si tengo que hacer algo especifico y cual action mando como predeterminad en caso de que  venga null
                 searchText=" ";
             }
-            String errorMsg = "";
 
             //Para enviar datos a la vista
             Map<String, Object> data = new HashMap<String, Object>();
