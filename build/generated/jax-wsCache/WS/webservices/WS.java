@@ -1,5 +1,5 @@
 
-package Busqueda.clientews;
+package webservices;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -34,8 +34,8 @@ public interface WS {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getProducts", targetNamespace = "http://webservices/", className = "Busqueda.clientews.GetProducts")
-    @ResponseWrapper(localName = "getProductsResponse", targetNamespace = "http://webservices/", className = "Busqueda.clientews.GetProductsResponse")
+    @RequestWrapper(localName = "getProducts", targetNamespace = "http://webservices/", className = "webservices.GetProducts")
+    @ResponseWrapper(localName = "getProductsResponse", targetNamespace = "http://webservices/", className = "webservices.GetProductsResponse")
     @Action(input = "http://webservices/WS/getProductsRequest", output = "http://webservices/WS/getProductsResponse")
     public String getProducts(
         @WebParam(name = "search", targetNamespace = "")

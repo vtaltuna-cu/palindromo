@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
-    <system systemId="http://localhost:8084/WSPalindromo/WS?wsdl" uri="wsdl/localhost_8084/WSPalindromo/WS.wsdl"/>
-    <system systemId="http://localhost:8084/WSPalindromo/WS?xsd=1" uri="wsdl/localhost_8084/WSPalindromo/WS.xsd_1.xsd"/>
+    <system systemId="http://localhost:3129/WSPalindromo/WS?xsd=1" uri="wsdl/localhost_3129/WSPalindromo/WS.xsd_1.xsd"/>
 </catalog>

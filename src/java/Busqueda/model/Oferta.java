@@ -17,16 +17,19 @@ public class Oferta {
 
     public Oferta() {
     }
+    
+    
 
     public static Map<String, Object> getProducts(java.lang.String search, int page, int pageSize) {
-        Busqueda.clientews.WS_Service service = new Busqueda.clientews.WS_Service();
-        Busqueda.clientews.WS port = service.getWSPort();
+        webservices.WS_Service service = new webservices.WS_Service();
+        webservices.WS port = service.getWSPort();
         String resultado = port.getProducts(search, page, pageSize);
         Gson g = new Gson();  
         Map<String, Object> json = g.fromJson(resultado, Map.class);
         //JSONObject json = new JSONObject(resultado); 
         return json;
     }
+    
     
    /* private Integer percent = 50;
     
@@ -136,6 +139,5 @@ public class Oferta {
         return (alreves.toString()).equals(cadena);
     }*/
 
-    
     
 }

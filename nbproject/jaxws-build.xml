@@ -28,8 +28,8 @@
     </target>
     <target name="wsimport-client-WS" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/WS"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/WS" destdir="${build.generated.dir}/jax-wsCache/WS" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/WS/wsdl/localhost_8084/WSPalindromo/WS.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8084/WSPalindromo/WS?wsdl" xnocompile="true" xendorsed="true" package="Busqueda.clientews">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/WS/wsdl/localhost_8084/WSPalindromo/WS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/WS" destdir="${build.generated.dir}/jax-wsCache/WS" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/WS/wsdl/localhost_3129/WSPalindromo/WS.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:3129/WSPalindromo/WS?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/WS/wsdl/localhost_3129/WSPalindromo/WS.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/WS"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
@@ -39,7 +39,7 @@
         </copy>
     </target>
     <target name="wsimport-client-clean-WS" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/Busqueda/clientews"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/webservices"/>
         <delete dir="${build.generated.dir}/jax-wsCache/WS"/>
     </target>
     <target name="wsimport-client-generate" depends="wsimport-client-WS"/>
